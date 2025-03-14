@@ -39,30 +39,41 @@ def main():
         rows = st.number_input("Rows", min_value=1, value=3)
         cols = st.number_input("Columns", min_value=1, value=3)
 
-    # Create matrices with random values
-    matrix_a_np = np.random.rand(rows, cols)
-    matrix_b_np = np.random.rand(rows, cols)
+    try:
+        # Create matrices with random values
+        matrix_a_np = np.random.rand(rows, cols)
+        matrix_b_np = np.random.rand(rows, cols)
 
-    # Convert to our C++ matrices
-    matrix_a = numpy_to_matrix(matrix_a_np)
-    matrix_b = numpy_to_matrix(matrix_b_np)
+        # Convert to our C++ matrices
+        matrix_a = numpy_to_matrix(matrix_a_np)
+        matrix_b = numpy_to_matrix(matrix_b_np)
 
-    operation = st.selectbox("Select Operation", ["Add", "Subtract", "Multiply"])
+        operation = st.selectbox("Select Operation", ["Add", "Subtract", "Multiply"])
 
-    if st.button("Compute"):
-        if operation == "Add":
-            result = matrix_a + matrix_b
-        elif operation == "Subtract":
-            result = matrix_a - matrix_b
-        else:
-            result = matrix_a * matrix_b
+        if st.button("Compute"):
+            try:
+                if operation == "Add":
+                    result = matrix_a + matrix_b
+                elif operation == "Subtract":
+                    result = matrix_a - matrix_b
+                else:  # Multiply
+                    # For multiplication, dimensions must match
+                    if matrix_a.cols() != matrix_b.rows():
+                        st.error("Matrix dimensions must match for multiplication")
+                        return
+                    result = matrix_a * matrix_b
 
-        # Visualize results
-        result_matrix = matrix_to_numpy(result)
+                # Visualize results
+                result_matrix = matrix_to_numpy(result)
 
-        fig = go.Figure(data=[go.Heatmap(z=result_matrix)])
-        fig.update_layout(title="Result Matrix Heatmap")
-        st.plotly_chart(fig)
+                fig = go.Figure(data=[go.Heatmap(z=result_matrix)])
+                fig.update_layout(title="Result Matrix Heatmap")
+                st.plotly_chart(fig)
+            except Exception as e:
+                st.error(f"Error during computation: {str(e)}")
+
+    except Exception as e:
+        st.error(f"Error initializing matrices: {str(e)}")
 
     st.header("Neural Network Demo")
 
