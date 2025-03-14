@@ -723,3 +723,45 @@ events:
       Running the CXX compiler's linker: "/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/ld" "-v"
       GNU ld (GNU Binutils) 2.41
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/nix/store/q1nssraba326p2kp6627hldd2bhg254c-cmake-3.29.2/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "/nix/store/q1nssraba326p2kp6627hldd2bhg254c-cmake-3.29.2/share/cmake-3.29/Modules/Internal/CheckCompilerFlag.cmake:18 (cmake_check_source_compiles)"
+      - "/nix/store/q1nssraba326p2kp6627hldd2bhg254c-cmake-3.29.2/share/cmake-3.29/Modules/CheckCXXCompilerFlag.cmake:34 (cmake_check_compiler_flag)"
+      - "/nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/share/cmake/pybind11/pybind11Common.cmake:287 (check_cxx_compiler_flag)"
+      - "/nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/share/cmake/pybind11/pybind11Common.cmake:332 (_pybind11_return_if_cxx_and_linker_flags_work)"
+      - "/nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/share/cmake/pybind11/pybind11Common.cmake:399 (_pybind11_generate_lto)"
+      - "/nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/share/cmake/pybind11/pybind11Config.cmake:250 (include)"
+      - "CMakeLists.txt:10 (find_package)"
+    checks:
+      - "Performing Test HAS_FLTO"
+    directories:
+      source: "/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN"
+      binary: "/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_POSITION_INDEPENDENT_CODE: "ON"
+    buildResult:
+      variable: "HAS_FLTO"
+      cached: true
+      stdout: |
+        Change Dir: '/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN'
+        
+        Run Build Command(s): /nix/store/q1nssraba326p2kp6627hldd2bhg254c-cmake-3.29.2/bin/cmake -E env VERBOSE=1 /nix/store/cdzpn0rdq810aknww3w9fy3wmw9ixr66-gnumake-4.4.1/bin/make -f Makefile cmTC_886ef/fast
+        /nix/store/cdzpn0rdq810aknww3w9fy3wmw9ixr66-gnumake-4.4.1/bin/make  -f CMakeFiles/cmTC_886ef.dir/build.make CMakeFiles/cmTC_886ef.dir/build
+        make[1]: Entering directory '/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN'
+        Building CXX object CMakeFiles/cmTC_886ef.dir/src.cxx.o
+        /nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ -DHAS_FLTO  -std=gnu++17 -fPIE   -flto -fno-fat-lto-objects -o CMakeFiles/cmTC_886ef.dir/src.cxx.o -c /home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN/src.cxx
+        Linking CXX executable cmTC_886ef
+        /nix/store/q1nssraba326p2kp6627hldd2bhg254c-cmake-3.29.2/bin/cmake -E cmake_link_script CMakeFiles/cmTC_886ef.dir/link.txt --verbose=1
+        /nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ CMakeFiles/cmTC_886ef.dir/src.cxx.o -o cmTC_886ef  -flto
+        make[1]: Leaving directory '/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles/CMakeScratch/TryCompile-piXeuN'
+        
+      exitCode: 0
+...
