@@ -1,3 +1,4 @@
+
 {pkgs}: {
   deps = [
     pkgs.libxcrypt
@@ -5,5 +6,6 @@
     pkgs.catch
     pkgs.gcc
     pkgs.cmake
+    pkgs.python311Packages.pybind11
   ];
 }
