@@ -48,9 +48,7 @@ class CMakeBuild(build_ext):
 setup(
     name="mlcpp",
     version="0.1",
-    author="AI Developer",
     description="C++ Matrix and Neural Network Library with Python Bindings",
-    long_description="",
     ext_modules=[CMakeExtension("mlcpp")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,

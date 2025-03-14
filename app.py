@@ -1,3 +1,6 @@
+import sys
+sys.path.insert(0, "src")  # Add src directory to Python path
+
 import streamlit as st
 import numpy as np
 import plotly.graph_objects as go

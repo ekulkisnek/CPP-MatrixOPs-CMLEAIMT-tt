@@ -14,7 +14,7 @@ enum class ActivationType {
 class Layer {
 public:
     Layer(size_t input_size, size_t output_size, ActivationType activation);
-    
+
     Matrix forward(const Matrix& input);
     Matrix backward(const Matrix& gradient);
     void update_weights(float learning_rate);
@@ -28,20 +28,20 @@ private:
     Matrix last_input_;
     Matrix last_output_;
     ActivationType activation_;
-    
-    std::function<float(float)> get_activation_function();
-    std::function<float(float)> get_activation_derivative();
+
+    std::function<float(float)> get_activation_function() const;
+    std::function<float(float)> get_activation_derivative() const;
 };
 
 class NeuralNetwork {
 public:
     NeuralNetwork();
-    
+
     void add_layer(size_t input_size, size_t output_size, ActivationType activation);
     Matrix forward(const Matrix& input);
     void backward(const Matrix& expected, float learning_rate);
-    
-    std::vector<Layer>& get_layers() { return layers_; }
+
+    const std::vector<Layer>& get_layers() const { return layers_; }
 
 private:
     std::vector<Layer> layers_;

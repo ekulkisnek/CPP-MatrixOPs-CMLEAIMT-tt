@@ -1,6 +1,8 @@
 #include "matrix.hpp"
 #include "optimizations.hpp"
 #include <algorithm>
+#include <stdexcept>
+#include <cstring>
 
 namespace ml {
 
@@ -11,25 +13,24 @@ Matrix::Matrix(size_t rows, size_t cols)
     }
     size_t size = get_aligned_size();
     data_ = std::make_unique<float[]>(size);
-    std::fill_n(data_.get(), rows_ * cols_, 0.0f);
+    std::fill_n(data_.get(), size, 0.0f);
 }
 
 Matrix::Matrix(const Matrix& other) 
     : rows_(other.rows_), cols_(other.cols_) {
     size_t size = get_aligned_size();
     data_ = std::make_unique<float[]>(size);
-    std::memcpy(data_.get(), other.data_.get(), rows_ * cols_ * sizeof(float));
+    std::copy_n(other.data_.get(), size, data_.get());
 }
 
 Matrix& Matrix::operator=(const Matrix& other) {
     if (this != &other) {
-        if (rows_ != other.rows_ || cols_ != other.cols_) {
-            rows_ = other.rows_;
-            cols_ = other.cols_;
-            size_t size = get_aligned_size();
-            data_ = std::make_unique<float[]>(size);
-        }
-        std::memcpy(data_.get(), other.data_.get(), rows_ * cols_ * sizeof(float));
+        rows_ = other.rows_;
+        cols_ = other.cols_;
+        size_t size = get_aligned_size();
+        auto new_data = std::make_unique<float[]>(size);
+        std::copy_n(other.data_.get(), size, new_data.get());
+        data_ = std::move(new_data);
     }
     return *this;
 }
@@ -57,14 +58,16 @@ void Matrix::fill(float value) {
 Matrix Matrix::operator+(const Matrix& other) const {
     validate_dimensions(other);
     Matrix result(rows_, cols_);
-    add_optimized(other);
+    std::copy_n(data_.get(), rows_ * cols_, result.data_.get());
+    result.add_optimized(other);
     return result;
 }
 
 Matrix Matrix::operator-(const Matrix& other) const {
     validate_dimensions(other);
     Matrix result(rows_, cols_);
-    subtract_optimized(other);
+    std::copy_n(data_.get(), rows_ * cols_, result.data_.get());
+    result.subtract_optimized(other);
     return result;
 }
 
@@ -73,8 +76,41 @@ Matrix Matrix::operator*(const Matrix& other) const {
         throw std::invalid_argument("Invalid matrix dimensions for multiplication");
     }
     Matrix result(rows_, other.cols_);
-    multiply_optimized(other);
+    block_multiply(result.data_.get(), data_.get(), other.data_.get(), 
+                  rows_, other.cols_, cols_);
     return result;
+}
+
+Matrix& Matrix::operator+=(const Matrix& other) {
+    validate_dimensions(other);
+    add_optimized(other);
+    return *this;
+}
+
+Matrix& Matrix::operator-=(const Matrix& other) {
+    validate_dimensions(other);
+    subtract_optimized(other);
+    return *this;
+}
+
+void Matrix::add_optimized(const Matrix& other) {
+    validate_dimensions(other);
+    simd_add(data_.get(), other.data_.get(), rows_ * cols_);
+}
+
+void Matrix::subtract_optimized(const Matrix& other) {
+    validate_dimensions(other);
+    simd_subtract(data_.get(), other.data_.get(), rows_ * cols_);
+}
+
+void Matrix::multiply_optimized(const Matrix& other) {
+    if (cols_ != other.rows_) {
+        throw std::invalid_argument("Invalid matrix dimensions for multiplication");
+    }
+    Matrix result(rows_, other.cols_);
+    block_multiply(result.data_.get(), data_.get(), other.data_.get(), 
+                  rows_, other.cols_, cols_);
+    data_ = std::move(result.data_);
 }
 
 void Matrix::validate_dimensions(const Matrix& other) const {
