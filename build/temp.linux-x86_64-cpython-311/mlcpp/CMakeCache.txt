@@ -400,6 +400,8 @@ _Python_INCLUDE_DIR:INTERNAL=/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3
 //Python Properties
 _Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;11;10;64;;cpython-311-x86_64-linux-gnu;abi3;/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/python3.11;/home/runner/workspace/.pythonlibs/lib/python3.11;/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages;/home/runner/workspace/.pythonlibs/lib/python3.11/site-packages
 _Python_INTERPRETER_SIGNATURE:INTERNAL=eaeb78bbc75539dcde6543ccb568b19a
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
 //Path to a library.
 _Python_LIBRARY_RELEASE:INTERNAL=/nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/lib/libpython3.11.so
 //NumPy reason failure
