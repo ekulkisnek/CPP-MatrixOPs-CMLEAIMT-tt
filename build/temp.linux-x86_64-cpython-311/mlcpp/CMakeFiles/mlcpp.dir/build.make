@@ -69,10 +69,24 @@ include CMakeFiles/mlcpp.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/mlcpp.dir/flags.make
 
+CMakeFiles/mlcpp.dir/src/bindings.cpp.o: CMakeFiles/mlcpp.dir/flags.make
+CMakeFiles/mlcpp.dir/src/bindings.cpp.o: /home/runner/workspace/src/bindings.cpp
+CMakeFiles/mlcpp.dir/src/bindings.cpp.o: CMakeFiles/mlcpp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mlcpp.dir/src/bindings.cpp.o"
+	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mlcpp.dir/src/bindings.cpp.o -MF CMakeFiles/mlcpp.dir/src/bindings.cpp.o.d -o CMakeFiles/mlcpp.dir/src/bindings.cpp.o -c /home/runner/workspace/src/bindings.cpp
+
+CMakeFiles/mlcpp.dir/src/bindings.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mlcpp.dir/src/bindings.cpp.i"
+	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/workspace/src/bindings.cpp > CMakeFiles/mlcpp.dir/src/bindings.cpp.i
+
+CMakeFiles/mlcpp.dir/src/bindings.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mlcpp.dir/src/bindings.cpp.s"
+	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/workspace/src/bindings.cpp -o CMakeFiles/mlcpp.dir/src/bindings.cpp.s
+
 CMakeFiles/mlcpp.dir/src/matrix.cpp.o: CMakeFiles/mlcpp.dir/flags.make
 CMakeFiles/mlcpp.dir/src/matrix.cpp.o: /home/runner/workspace/src/matrix.cpp
 CMakeFiles/mlcpp.dir/src/matrix.cpp.o: CMakeFiles/mlcpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/mlcpp.dir/src/matrix.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mlcpp.dir/src/matrix.cpp.o"
 	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mlcpp.dir/src/matrix.cpp.o -MF CMakeFiles/mlcpp.dir/src/matrix.cpp.o.d -o CMakeFiles/mlcpp.dir/src/matrix.cpp.o -c /home/runner/workspace/src/matrix.cpp
 
 CMakeFiles/mlcpp.dir/src/matrix.cpp.i: cmake_force
@@ -86,7 +100,7 @@ CMakeFiles/mlcpp.dir/src/matrix.cpp.s: cmake_force
 CMakeFiles/mlcpp.dir/src/neural.cpp.o: CMakeFiles/mlcpp.dir/flags.make
 CMakeFiles/mlcpp.dir/src/neural.cpp.o: /home/runner/workspace/src/neural.cpp
 CMakeFiles/mlcpp.dir/src/neural.cpp.o: CMakeFiles/mlcpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/mlcpp.dir/src/neural.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mlcpp.dir/src/neural.cpp.o"
 	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mlcpp.dir/src/neural.cpp.o -MF CMakeFiles/mlcpp.dir/src/neural.cpp.o.d -o CMakeFiles/mlcpp.dir/src/neural.cpp.o -c /home/runner/workspace/src/neural.cpp
 
 CMakeFiles/mlcpp.dir/src/neural.cpp.i: cmake_force
@@ -100,7 +114,7 @@ CMakeFiles/mlcpp.dir/src/neural.cpp.s: cmake_force
 CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: CMakeFiles/mlcpp.dir/flags.make
 CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimizations.cpp
 CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: CMakeFiles/mlcpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/mlcpp.dir/src/optimizations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mlcpp.dir/src/optimizations.cpp.o"
 	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mlcpp.dir/src/optimizations.cpp.o -MF CMakeFiles/mlcpp.dir/src/optimizations.cpp.o.d -o CMakeFiles/mlcpp.dir/src/optimizations.cpp.o -c /home/runner/workspace/src/optimizations.cpp
 
 CMakeFiles/mlcpp.dir/src/optimizations.cpp.i: cmake_force
@@ -111,34 +125,20 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mlcpp.dir/src/optimizations.cpp.s"
 	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/workspace/src/optimizations.cpp -o CMakeFiles/mlcpp.dir/src/optimizations.cpp.s
 
-CMakeFiles/mlcpp.dir/src/bindings.cpp.o: CMakeFiles/mlcpp.dir/flags.make
-CMakeFiles/mlcpp.dir/src/bindings.cpp.o: /home/runner/workspace/src/bindings.cpp
-CMakeFiles/mlcpp.dir/src/bindings.cpp.o: CMakeFiles/mlcpp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/mlcpp.dir/src/bindings.cpp.o"
-	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/mlcpp.dir/src/bindings.cpp.o -MF CMakeFiles/mlcpp.dir/src/bindings.cpp.o.d -o CMakeFiles/mlcpp.dir/src/bindings.cpp.o -c /home/runner/workspace/src/bindings.cpp
-
-CMakeFiles/mlcpp.dir/src/bindings.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/mlcpp.dir/src/bindings.cpp.i"
-	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/workspace/src/bindings.cpp > CMakeFiles/mlcpp.dir/src/bindings.cpp.i
-
-CMakeFiles/mlcpp.dir/src/bindings.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/mlcpp.dir/src/bindings.cpp.s"
-	/nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/workspace/src/bindings.cpp -o CMakeFiles/mlcpp.dir/src/bindings.cpp.s
-
 # Object files for target mlcpp
 mlcpp_OBJECTS = \
+"CMakeFiles/mlcpp.dir/src/bindings.cpp.o" \
 "CMakeFiles/mlcpp.dir/src/matrix.cpp.o" \
 "CMakeFiles/mlcpp.dir/src/neural.cpp.o" \
-"CMakeFiles/mlcpp.dir/src/optimizations.cpp.o" \
-"CMakeFiles/mlcpp.dir/src/bindings.cpp.o"
+"CMakeFiles/mlcpp.dir/src/optimizations.cpp.o"
 
 # External object files for target mlcpp
 mlcpp_EXTERNAL_OBJECTS =
 
+/home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/src/bindings.cpp.o
 /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/src/matrix.cpp.o
 /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/src/neural.cpp.o
 /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/src/optimizations.cpp.o
-/home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/src/bindings.cpp.o
 /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/build.make
 /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so: CMakeFiles/mlcpp.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/runner/workspace/build/temp.linux-x86_64-cpython-311/mlcpp/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared module /home/runner/workspace/build/lib.linux-x86_64-cpython-311/mlcpp.cpython-311-x86_64-linux-gnu.so"

@@ -4,7 +4,7 @@
 # compile CXX with /nix/store/9bv7dcvmfcjnmg5mnqwqlq2wxfn8d7yi-gcc-wrapper-13.2.0/bin/g++
 CXX_DEFINES = -Dmlcpp_EXPORTS
 
-CXX_INCLUDES = -I/home/runner/workspace/src -isystem /nix/store/clx0mcir7qw8zk36zbr4jra789g3knf6-python3-3.11.10/include/python3.11 -isystem /nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/include
+CXX_INCLUDES = -I/home/runner/workspace/src -isystem /nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11 -isystem /nix/store/br2apairflg0zxamwzb2q13bk4xazk6n-python3.11-pybind11-2.12.0/include
 
-CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -mavx2 -mfma -flto -fno-fat-lto-objects
+CXX_FLAGS = -O3 -DNDEBUG -std=gnu++17 -fPIC -fvisibility=hidden -O3 -march=native -flto -fno-fat-lto-objects
 

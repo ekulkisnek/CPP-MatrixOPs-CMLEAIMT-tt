@@ -1,6 +1,7 @@
+AI readme
 
 # Neural Network Matrix Operations Demo
-
+![image](image.png)
 A high-performance C++ implementation of matrix operations and neural networks with Python bindings using pybind11, featuring an interactive Streamlit visualization interface.
 
 ## Features
@@ -87,11 +88,51 @@ The demo showcases:
 ├── setup.py            # Python package configuration
 └── CMakeLists.txt     # CMake build configuration
 ```
+Let me explain this codebase - it's a Neural Network Matrix Operations Demo that combines C++ performance with Python visualization.
 
-## License
+Key Components:
 
-This project is available under the MIT License. See the LICENSE file for details.
+    Core C++ Implementation (src/):
 
-## Contributing
+    matrix.hpp/cpp: Implements optimized matrix operations using AVX2
+    neural.hpp/cpp: Neural network implementation with layers and activations
+    optimizations.cpp: SIMD optimizations for matrix operations
+    bindings.cpp: Python bindings using pybind11
 
-Feel free to fork this template and make improvements. Pull requests are welcome!
+    Python Interface (app.py):
+
+    Streamlit web interface for interactive demos
+    Matrix operations visualization with heat maps
+    Neural network output visualization with 3D surfaces
+    Converts between C++ matrices and NumPy arrays
+
+    Testing (tests/):
+
+    test_matrix.cpp: Tests matrix operations
+    test_neural.cpp: Tests neural network functionality
+
+    Build System:
+
+    CMakeLists.txt: C++ build configuration
+    build.sh: Build script for compiling C++ code
+    setup.py: Python package configuration
+
+Main Features:
+
+    High-performance matrix operations with AVX2 optimization
+    Neural network with configurable layers and activations
+    Interactive web interface for visualization
+    Seamless C++/Python integration
+
+The project demonstrates how to:
+
+    Optimize numerical computations using C++
+    Create Python bindings for C++ code
+    Build interactive visualizations with Streamlit
+    Implement and visualize neural networks
+
+When run, it provides an interactive demo where users can:
+
+    Perform matrix operations and see results
+    Visualize neural network behavior
+    Experiment with different configurations
