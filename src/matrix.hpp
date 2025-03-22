@@ -7,62 +7,69 @@
 
 namespace ml {
 
-// Matrix class: Implements a 2D matrix with SIMD-optimized operations
-// Uses aligned memory allocation for AVX operations and implements
-// basic matrix arithmetic with performance optimizations
+// Matrix class: Core implementation of matrix operations optimized for SIMD/AVX2
+// All memory is aligned to 32-byte boundaries for optimal AVX operations
 class Matrix {
 public:
-    // Constructor: Creates a matrix with given dimensions
-    // Memory is aligned for AVX operations (32-byte boundary)
+    // Creates a new matrix with specified dimensions
+    // Memory is allocated with 32-byte alignment for AVX2 SIMD operations
+    // rows: Number of matrix rows
+    // cols: Number of matrix columns
     Matrix(size_t rows, size_t cols);
     
-    // Copy constructor: Creates a deep copy of another matrix
-    // Maintains memory alignment of the original
+    // Deep copy constructor - creates exact duplicate of source matrix
+    // Maintains 32-byte memory alignment of the original
+    // other: Source matrix to copy from
     Matrix(const Matrix& other);
     
-    // Assignment operator: Performs deep copy while preserving alignment
+    // Assignment operator - performs deep copy while keeping alignment
+    // Returns reference to allow chained assignments (a = b = c)
     Matrix& operator=(const Matrix& other);
     
-    // Destructor: Automatically handles aligned memory deallocation
+    // Cleanup memory - automatically handles aligned deallocation
     ~Matrix();
 
-    // Arithmetic operations
-    // Each returns a new matrix containing the result
-    Matrix operator+(const Matrix& other) const; // Element-wise addition
-    Matrix operator-(const Matrix& other) const; // Element-wise subtraction
+    // Mathematical Operations - all return new matrices
+    // const qualifier ensures these don't modify the original matrices
+    Matrix operator+(const Matrix& other) const; // Element-wise matrix addition
+    Matrix operator-(const Matrix& other) const; // Element-wise matrix subtraction
     Matrix operator*(const Matrix& other) const; // Matrix multiplication
 
-    // In-place arithmetic operations
-    // Modifies the current matrix directly
-    Matrix& operator+=(const Matrix& other);
-    Matrix& operator-=(const Matrix& other);
+    // In-place operations - modify the current matrix
+    // Returns reference to allow operation chaining (a += b += c)
+    Matrix& operator+=(const Matrix& other); // Add other matrix to this one
+    Matrix& operator-=(const Matrix& other); // Subtract other matrix from this one
 
-    // Element access with bounds checking
+    // Access individual elements with bounds checking
+    // row: Zero-based row index
+    // col: Zero-based column index
+    // Throws std::out_of_range if indices are invalid
     float& at(size_t row, size_t col);
     const float& at(size_t row, size_t col) const;
     
-    // Fills entire matrix with a single value
+    // Set all elements to specified value
+    // value: The value to fill the matrix with
     void fill(float value);
 
-    // Accessors for matrix properties
-    size_t rows() const { return rows_; }
-    size_t cols() const { return cols_; }
-    float* data() { return data_.get(); } // Direct data access for SIMD ops
-    const float* data() const { return data_.get(); }
+    // Accessor methods for matrix properties
+    size_t rows() const { return rows_; }  // Get number of rows
+    size_t cols() const { return cols_; }  // Get number of columns
+    float* data() { return data_.get(); }  // Get raw data pointer for SIMD ops
+    const float* data() const { return data_.get(); }  // Const version
 
-    // SIMD-optimized operations using AVX instructions
-    void add_optimized(const Matrix& other);      // AVX-based addition
-    void subtract_optimized(const Matrix& other); // AVX-based subtraction
-    void multiply_optimized(const Matrix& other); // AVX-based multiplication
+    // SIMD-optimized operations using AVX2
+    void add_optimized(const Matrix& other);      // AVX2 vectorized addition
+    void subtract_optimized(const Matrix& other); // AVX2 vectorized subtraction
+    void multiply_optimized(const Matrix& other); // AVX2 vectorized multiplication
 
 private:
     size_t rows_;    // Number of matrix rows
     size_t cols_;    // Number of matrix columns
-    std::unique_ptr<float[]> data_; // Aligned memory for matrix elements
+    std::unique_ptr<float[]> data_; // Aligned memory buffer for matrix elements
     
-    // Utility functions
-    void validate_dimensions(const Matrix& other) const; // Checks matrix compatibility
-    size_t get_aligned_size() const; // Calculates size with padding for alignment
+    // Internal helper methods
+    void validate_dimensions(const Matrix& other) const; // Check matrix compatibility
+    size_t get_aligned_size() const; // Calculate size with padding for AVX2
 };
 
 } // namespace ml
