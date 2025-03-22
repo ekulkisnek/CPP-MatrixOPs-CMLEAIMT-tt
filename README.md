@@ -2,6 +2,17 @@ AI readme
 
 # Neural Network Matrix Operations Demo
 
+## Key Files for Learning
+
+- **src/matrix.hpp/cpp**: Core matrix operations implementation with AVX2 SIMD optimizations and cache-friendly algorithms
+- **src/neural.hpp/cpp**: Neural network core with modular layer architecture and activation functions
+- **src/optimizations.cpp**: Advanced SIMD optimizations for matrix operations using AVX2 instructions
+- **src/bindings.cpp**: Python/C++ bindings using pybind11 to expose functionality to Python
+- **app.py**: Streamlit web interface with interactive demos and visualizations
+- **tests/**: Unit tests demonstrating usage and validating functionality
+  - test_matrix.cpp: Tests for matrix operations
+  - test_neural.cpp: Tests for neural network components
+
 A high-performance C++ implementation of matrix operations and neural networks with Python bindings using pybind11, featuring an interactive Streamlit visualization interface.
 
 ## Features
