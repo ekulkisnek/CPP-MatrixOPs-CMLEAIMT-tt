@@ -793,7 +793,6 @@ CMakeFiles/mlcpp.dir/src/neural.cpp.o: /home/runner/workspace/src/neural.cpp \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/pstl/pstl_config.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/random \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/stdexcept \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/stdlib.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/string \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/string_view \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/tr1/bessel_function.tcc \
@@ -823,15 +822,9 @@ CMakeFiles/mlcpp.dir/src/neural.cpp.o: /home/runner/workspace/src/neural.cpp \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/x86_64-unknown-linux-gnu/bits/opt_random.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/x86_64-unknown-linux-gnu/bits/os_defines.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include-fixed/pthread.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/emmintrin.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/mm_malloc.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/mmintrin.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/mwaitintrin.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/pmmintrin.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/stdarg.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/stddef.h \
   /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/stdint.h \
-  /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/xmmintrin.h \
   /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/alloca.h \
   /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/asm-generic/errno-base.h \
   /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/asm-generic/errno.h \
@@ -1129,6 +1122,8 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/xtestintrin.h:
 
+/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/xmmintrin.h:
+
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/x86gprintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/wmmintrin.h:
@@ -1154,8 +1149,6 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/raointintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/popcntintrin.h:
-
-/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/pconfigintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/xsavesintrin.h:
 
@@ -1282,6 +1275,8 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/bits/sched.h:
 
 /nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/cpython/sysmodule.h:
+
+/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/pconfigintrin.h:
 
 /nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/cpython/descrobject.h:
 
@@ -1957,8 +1952,6 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 
 /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/asm-generic/int-ll64.h:
 
-/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/xmmintrin.h:
-
 /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/asm-generic/posix_types.h:
 
 /nix/store/fwh4fxd747m0py3ib3s5abamia9nrf90-glibc-2.39-52-dev/include/bits/locale.h:
@@ -2195,10 +2188,6 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/include/c++/13.2.0/x86_64-unknown-linux-gnu/bits/opt_random.h:
 
-/nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/bltinmodule.h:
-
-/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/emmintrin.h:
-
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/adxintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/amxbf16intrin.h:
@@ -2210,12 +2199,6 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/avx5124vnniwintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/avx512bf16vlintrin.h:
-
-/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/mwaitxintrin.h:
-
-/nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/sysmodule.h:
-
-/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/avx512bitalgintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/avx512bwintrin.h:
 
@@ -2261,6 +2244,16 @@ CMakeFiles/mlcpp.dir/src/optimizations.cpp.o: /home/runner/workspace/src/optimiz
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/cmpccxaddintrin.h:
 
+/nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/bltinmodule.h:
+
+/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/emmintrin.h:
+
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/lwpintrin.h:
 
 /nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/lzcntintrin.h:
+
+/nix/store/7hnr99nxrd2aw6lghybqdmkckq60j6l9-python3-3.11.9/include/python3.11/sysmodule.h:
+
+/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/avx512bitalgintrin.h:
+
+/nix/store/14c6s4xzhy14i2b05s00rjns2j93gzz4-gcc-13.2.0/lib/gcc/x86_64-unknown-linux-gnu/13.2.0/include/mwaitxintrin.h:

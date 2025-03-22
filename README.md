@@ -1,7 +1,7 @@
 AI readme
 
 # Neural Network Matrix Operations Demo
-![image](image.png)
+
 A high-performance C++ implementation of matrix operations and neural networks with Python bindings using pybind11, featuring an interactive Streamlit visualization interface.
 
 ## Features
@@ -23,7 +23,7 @@ A high-performance C++ implementation of matrix operations and neural networks w
   - Neural network output surface plotting
   - Heat map visualizations of results
   - Dynamic input parameter adjustment
-
+![image](image.png)
 ## Requirements
 
 - Python 3.11+
